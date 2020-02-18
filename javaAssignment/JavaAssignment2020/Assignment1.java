@@ -8,8 +8,8 @@ import java.io.*;
 import java.util.regex.*;
 class Assignment1
 {
-    static String s;
     static Pattern pattern;
+    
     public static void search(String path,String regex)
     {
         File folder = new File(path);
@@ -17,7 +17,7 @@ class Assignment1
        // String result="not found";
         for(File file:folder.listFiles())
         {
-            
+         
             if(file.isFile() && pattern.matcher(file.getName()).matches())
                 System.out.println(file.getAbsolutePath());////get  file.getAbsolutePath() if it is file and matches regex
 
@@ -35,7 +35,7 @@ class Assignment1
         {
             System.out.println("Enter the regex to search (CTRL+C to quit): ");
             String regex = br.readLine();
-            //passing home directory because to search all directories recurrsively
+            //passing home directory to search all directories recurrsively
             search(System.getProperty("user.home"),regex);
         }
     }
