@@ -55,6 +55,7 @@ class Vampire
         String numString=Integer.toString(num);
         map=insertMap(numString);
         int length=numString.length()/2;
+        
         int initialNum=genNum(length);
         int finalNum=getFinal(length);
 
