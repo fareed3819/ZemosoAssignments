@@ -23,5 +23,5 @@ package fareed.assignment5.data;
         	char ch;
         	System.out.println("int variable:"+n);
         	System.out.println("char variable:"+ch);
-        }*/
+         }*/
 }
