@@ -124,6 +124,5 @@ class Generics{
             choice=scanner.nextInt();
         }
 
-
     }
 }
