@@ -7,10 +7,10 @@ import java.util.regex.*;
 
 class RegEx{
     public static void main(String args[]){
-        String regex="^[A-Z].*[.]";
+        String inputRegex="^[A-Z].*[.]";
        // String line=args[0];
         String line="Ads342.";   //testing input
-        Pattern pattern = Pattern.compile(regex);
+        Pattern pattern = Pattern.compile(inputRegex);
         Matcher matcher=pattern.matcher(line);
         if(matcher.find()) System.out.println("found");
         else System.out.println("not found");
