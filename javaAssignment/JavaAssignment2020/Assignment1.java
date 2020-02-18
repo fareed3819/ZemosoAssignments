@@ -17,12 +17,12 @@ class Assignment1
        // String result="not found";
         for(File file:folder.listFiles())
         {
-
+            
             if(file.isFile() && pattern.matcher(file.getName()).matches())
-                System.out.println(file.getAbsolutePath());
+                System.out.println(file.getAbsolutePath());////get  file.getAbsolutePath() if it is file and matches regex
 
-                //return file.getAbsolutePath();
-            else if(file.isDirectory())
+                
+            else if(file.isDirectory())//if it is directrory perfrom search again
                 search(file.getAbsolutePath(),regex);
         }
 
@@ -35,6 +35,7 @@ class Assignment1
         {
             System.out.println("Enter the regex to search (CTRL+C to quit): ");
             String regex = br.readLine();
+            //passing home directory because to search all directories recurrsively
             search(System.getProperty("user.home"),regex);
         }
     }
