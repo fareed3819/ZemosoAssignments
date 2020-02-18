@@ -4,18 +4,18 @@
 4. Complete the previous exercise by creating objects to attach to the array of references.
  */
 package assignment6;
-class B{
+class Demo{
     private String name;
-    public B(String s){
-        this.name=s;
-        System.out.println(s);
+    public Demo(String name){
+        this.name=name;
+        System.out.println(name);
     }
     public static void main(String args[]){
         //constructers wont be invoked as we are creating an array object not B.
-        B b[]= new B[10];
+        Demo demos[]= new Demo[10];
         //constructors are invoked
         for(int i=0;i<10;i++)
-            b[i]= new B("constructer invoked");
+            demos[i]= new Demo("constructer invoked");
 
     }
 }
