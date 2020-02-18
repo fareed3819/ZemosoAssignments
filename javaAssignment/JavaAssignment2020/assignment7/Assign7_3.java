@@ -29,7 +29,7 @@ class Driver{
 }
 class TestDrive extends Driver implements Car{
     public TestDrive(){
-        super("Sreetej");
+        super("Fareed");
     }
     public void horsePower(){System.out.println("600hp");}
     public void fuelType(){System.out.println("petrol");}
