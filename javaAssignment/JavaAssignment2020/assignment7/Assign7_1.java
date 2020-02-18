@@ -2,7 +2,6 @@ package assignment7;
 
 class Rodent{
 
-    String canines="none";
     public void eat(){
         System.out.println("Rodent is eating");
     }
