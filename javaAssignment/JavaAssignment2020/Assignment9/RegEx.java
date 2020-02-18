@@ -3,7 +3,6 @@ Using the documentation for java.util.regex.Pattern as a resource, write and tes
  */
 package Assignment9;
 
-import javax.imageio.ImageTranscoder;
 import java.util.*;
 import java.util.regex.*;
 class RegExCheck{
