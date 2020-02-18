@@ -60,6 +60,5 @@ class TestCycle{
         factory.getObject("unicycle").brake();
         factory.getObject("tricycle").brake();
         factory.getObject("bicycle").brake();
-
     }
 }
