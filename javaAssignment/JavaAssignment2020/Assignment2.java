@@ -7,16 +7,18 @@ Write a java function that checks if the input string contains all the letters o
 import java.util.*;
 import java.io.*;
 class Assignment2
-{
+{   
     public static void check(char inputArray[])
     {
         Set<Character> set = new HashSet<>();
-        for(char ch:inputArray)
-            set.add(ch);
-        for(char ch='a';ch<='z';ch++)
-            if(!set.contains(ch))
+        //add all unique input characters to set 
+        for(char character:inputArray)
+            set.add(character);
+        //check a-z characters present in set 
+        for(char character='a';character<='z';character++)
+            if(!set.contains(character))
             {
-                System.out.println("search breaked at "+ch+" because it is not found");System.exit(-1);
+                System.out.println("search breaked at "+character+" because it is not found");System.exit(-1);
             }
         System.out.println("All small alphabet are present in input");
     }
@@ -25,8 +27,8 @@ class Assignment2
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the input string: ");
-        char input[] = bufferedReader.readLine().toLowerCase().toCharArray();
-        check(input);
+        char inputString[] = bufferedReader.readLine().toLowerCase().toCharArray();
+        check(inputString);
 
     }
 } 
