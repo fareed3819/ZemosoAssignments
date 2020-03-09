@@ -13,18 +13,6 @@ public class SmallAlphabet {
     This method adds unique characters from input to set and checks
     for existance of all small letters(a-z) using for loop
      */
-    public static boolean checkAllAlphabetOccurrence(char inputArray[]) {
-        Set<Character> set = new HashSet<>();
-        for (char character : inputArray)
-            set.add(character);
-        for (char character = 'a'; character <= 'z'; character++)
-            if (!set.contains(character)) {
-                logger.info("search breaked at " + character + " because it is not found");
-                return false;
-            }
-        logger.info("all small alphabets are present");
-        return true;
-    }
 
     public static void main(String[] args) {
         try {
@@ -38,4 +26,17 @@ public class SmallAlphabet {
             logger.info("Exception ocurred at input ");
         }
     }
+    public static boolean checkAllAlphabetOccurrence(char inputArray[]) {
+        Set<Character> set = new HashSet<>();
+        for (char character : inputArray)
+            set.add(character);
+        for (char character = 'a'; character <= 'z'; character++)
+            if (!set.contains(character)) {
+                logger.info("search breaked at " + character + " because it is not found");
+                return false;
+            }
+        logger.info("all small alphabets are present");
+        return true;
+    }
+
 }
