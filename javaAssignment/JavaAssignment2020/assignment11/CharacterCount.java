@@ -8,14 +8,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 class CharacterCount {
-    int i = 0;
+    int characterRead = 0;
     HashMap<String, Integer> map = new HashMap<String, Integer>();
 
     void insertCharacters(String fileName) throws Exception {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
         //inserting the characters in a map
-        while ((i = bufferedReader.read()) != -1) {
-            char temp = (char) i;
+        while ((characterRead = bufferedReader.read()) != -1) {
+            char temp = (char) characterRead;
             String character = "";
             //new line check
             if (temp == '\n') character = "\\n";

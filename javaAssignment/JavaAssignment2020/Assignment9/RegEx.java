@@ -8,9 +8,9 @@ import java.util.regex.*;
 class RegExCheck{
     public boolean matchRegex(String regex,String input)
     {
-        Pattern p = Pattern.compile(regex);
-        Matcher m=p.matcher(input);
-        if(m.find()) return true;
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher=pattern.matcher(input);
+        if(matcher.find()) return true;
         return false;
     }
     public static void main(String args[]){
