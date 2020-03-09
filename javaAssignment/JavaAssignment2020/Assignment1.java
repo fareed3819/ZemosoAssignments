@@ -20,6 +20,19 @@ class MatchingFiles {
     It concatenates all the matched files absolute paths and returns the result as a string.
      */
 
+    public static void main(String[] args) {
+        try {
+            while (true) {
+                System.out.println("Enter the regex to search (CTRL+C to quit): ");
+                String regex = new BufferedReader(new InputStreamReader(System.in)).readLine();
+                String result = searchForMatchedFiles(System.getProperty("user.home"), regex);
+                logger.info("result is" + result);
+            }
+        } catch (Exception e) {
+            logger.info("Exception occured this may due to reading files having no read permissions or input error");
+            e.printStackTrace();
+        }
+    }
     public static String searchForMatchedFiles(String path, String regex) {
         String res = "";
         File folder = new File(path);
@@ -41,17 +54,4 @@ class MatchingFiles {
         return "Not found";
     }
 
-    public static void main(String[] args) {
-        try {
-            while (true) {
-                System.out.println("Enter the regex to search (CTRL+C to quit): ");
-                String regex = new BufferedReader(new InputStreamReader(System.in)).readLine();
-                String result = searchForMatchedFiles(System.getProperty("user.home"), regex);
-                logger.info("result is" + result);
-            }
-        } catch (Exception e) {
-            logger.info("Exception occured this may due to reading files having no read permissions or input error");
-            e.printStackTrace();
-        }
-    }
 }
